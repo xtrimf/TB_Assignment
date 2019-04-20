@@ -15,8 +15,8 @@ let allRows = []
 async function accessSpreadsheet() {
     let headerRow, h1, h2
 
-    const doc = new GoogleSpreadsheet("13ITAyM-8pq9hay_Y2NNOqS_ps2rSlWR080yBEEviXmI") // public doc
-    //const doc = new GoogleSpreadsheet("1WaSeM0q_ecSqASt28sJvCUhyEfSeC9INRtZD4HBkwq4") // private doc
+    //const doc = new GoogleSpreadsheet("13ITAyM-8pq9hay_Y2NNOqS_ps2rSlWR080yBEEviXmI") // public doc
+    const doc = new GoogleSpreadsheet("1WaSeM0q_ecSqASt28sJvCUhyEfSeC9INRtZD4HBkwq4") // private doc
 
     // authenticate
     try {
