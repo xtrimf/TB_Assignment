@@ -13,8 +13,8 @@ const serialRegExp = new RegExp(/[A-Z,0-9]{7,8}/) //serial number valiation capi
 let allRows = []
 
 async function accessSpreadsheet() {
-    let headerRow, h1, h2
 
+    
     //const doc = new GoogleSpreadsheet("13ITAyM-8pq9hay_Y2NNOqS_ps2rSlWR080yBEEviXmI") // public doc
     const doc = new GoogleSpreadsheet("1WaSeM0q_ecSqASt28sJvCUhyEfSeC9INRtZD4HBkwq4") // private doc
 
@@ -31,6 +31,7 @@ async function accessSpreadsheet() {
     //get and process sheets data and
     const headers = ["Electricity", "Name", "IPMI", "MAC", "Serial"];
     for (const sheet of info.worksheets) {
+        let headerRow, h1, h2
         let rows = []
         let cellList = []
         // get cells data
