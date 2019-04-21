@@ -12,7 +12,6 @@ let allRows = []
 
 
 async function accessSpreadsheet() {
-
     
     //const doc = new GoogleSpreadsheet("13ITAyM-8pq9hay_Y2NNOqS_ps2rSlWR080yBEEviXmI") // public doc
     const doc = new GoogleSpreadsheet("1WaSeM0q_ecSqASt28sJvCUhyEfSeC9INRtZD4HBkwq4") // private doc
@@ -20,9 +19,7 @@ async function accessSpreadsheet() {
     // authenticate
     try {
         await promisify(doc.useServiceAccountAuth)(creds)
-    } catch (e) {
-        throw e
-    };
+    } catch (e) {throw e};
 
     //get document info
     const info = await promisify(doc.getInfo)()
