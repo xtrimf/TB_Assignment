@@ -1,7 +1,5 @@
 const GoogleSpreadsheet = require("google-spreadsheet") // GOOGLE Sheets API
-const {
-    promisify
-} = require("util") // for async /await
+const {promisify} = require("util") // for async /await
 const creds = require("./client_secret.json") // credential files
 const fs = require('fs');
 
@@ -11,6 +9,7 @@ const ipRegExp = new RegExp(/\d{1,3}\.\d{1,3}\.\d{1,3}\.[0-9Z]{1,3}/) // ip addr
 const serialRegExp = new RegExp(/[A-Z,0-9]{7,8}/) //serial number valiation capital letters and/or numbers, allow length of 7-8 chars
 
 let allRows = []
+
 
 async function accessSpreadsheet() {
 
