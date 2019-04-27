@@ -54,16 +54,16 @@ func main() {
 	//start looping over sheets
 	headers := []string{"Electricity", "Name", "IPMI", "MAC", "Serial"}
 
-	println("Main: Processing...")
+	println("\nMain: Processing...")
 
 	for _, sheet := range spreadsheet.Sheets {
 		getSheetData(sheet, headers[0])
 	}
 
-	fmt.Printf("Main: Completed. Results (%v lines) are stored in 'Output.json'.", len(Rows))
+	fmt.Printf("\nMain: Completed. Results (%v lines) are stored in 'Output.json'.", len(Rows))
 	wrightResults()
 
-	fmt.Printf("\nProcessing time (sec): %.3f", time.Since(start).Seconds())
+	fmt.Printf("\nProcessing time (sec): %.3f\n\n", time.Since(start).Seconds())
 }
 
 func template(data string) int {
